@@ -91,11 +91,6 @@ for room, avg, advice in room_summaries:
 st.markdown("---")
 if st.button("📊 Go to Forecast Page"):
     st.info("🔜 Forecast page not implemented yet. This button will link to future predictive model.")
-'''
 
-# Save to file
-final_app_path = "/mnt/data/app_final.py"
-with open(final_app_path, "w") as f:
-    f.write(final_code)
 
 
