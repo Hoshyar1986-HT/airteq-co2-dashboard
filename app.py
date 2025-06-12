@@ -1,12 +1,11 @@
 # Updated app.py for better mobile display (centered layout and smaller figure)
 
-mobile_friendly_code = '''
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="AirTeq CO₂ Dashboard", layout="centered")
-st.title("🌿 AirTeq – CO₂ Monitoring Dashboard (Mobile-Friendly)")
+st.title(" AirTeq – CO₂ Monitoring Dashboard (Mobile-Friendly)")
 
 # Load dataset
 @st.cache_data
