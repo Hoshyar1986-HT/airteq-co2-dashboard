@@ -1,5 +1,4 @@
-# Update Streamlit app: add live alert banners, notifications, and navigation button for forecast page
-
+# Update: Style the forecast button – centered, large, and blue
 
 import streamlit as st
 import pandas as pd
@@ -42,9 +41,7 @@ def suggest_action(avg_co2):
         return "🚨 High CO₂ levels! Immediate ventilation recommended."
 
 def get_alert(avg_co2):
-    if avg_co2 > orange_max:
-        return True
-    return False
+    return avg_co2 > orange_max
 
 # Plotting
 st.subheader(f"📈 Hourly CO₂ Comparison – {selected_date}")
@@ -87,10 +84,10 @@ for room, avg, advice in room_summaries:
         st.write(f"**Average CO₂ on {selected_date}:** {avg:.0f} ppm")
         st.write(advice)
 
-# Navigation to forecast page
+# Navigation to forecast page – styled button
 st.markdown("---")
-if st.button("📊 Go to Forecast Page"):
-    st.info("🔜 Forecast page not implemented yet. This button will link to future predictive model.")
-
-
-
+st.markdown("<h3 style='text-align: center;'>🔮 7-day Forecast</h3>", unsafe_allow_html=True)
+centered_button = st.columns(3)
+with centered_button[1]:
+    if st.button("🔵 View Forecast", use_container_width=True):
+        st.info("🔜 Forecast page not implemented yet. This button will link to future predictive model.")
