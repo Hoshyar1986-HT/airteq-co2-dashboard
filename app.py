@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="AirTeq CO₂ Dashboard", layout="centered")
-st.title("🌿 AirTeq – CO₂ Monitoring Dashboard")
+st.title("AirTeq – CO₂ Monitoring Dashboard")
 
 # Load dataset
 @st.cache_data
